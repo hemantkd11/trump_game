@@ -50,6 +50,7 @@
   justify-content: center;
   background-color: black;
   color: white;
+  height: 100vh;
 }
 .Main_body_width_container {
   width: var(--w80);

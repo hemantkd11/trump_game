@@ -58,7 +58,7 @@
 .Main_wrapper {
   box-sizing: border-box;
   width: var(--w100);
-  height: 100vh;
+  height: 90vh;
   padding: 20px 0px;
   display: flex;
   align-items: center;

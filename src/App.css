@@ -132,6 +132,7 @@
 .trump_card_img img {
   width: var(--w100);
 }
+
 .start_game_btn {
   width: 100%;
   display: flex;
@@ -147,4 +148,128 @@
 }
 .start_game_btn button:hover {
   background-color: yellowgreen;
+}
+
+.start_game {
+  width: var(--w100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+  background-color: #0f0f3b;
+  color: white;
+}
+.start_game_main_container {
+  width: var(--w80);
+}
+.start_game_wrapper {
+  width: var(--w100);
+  display: flex;
+  flex-direction: column;
+  height: 97vh;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.trump_game_box {
+  padding: 20px 0px;
+  font-size: 20px;
+  margin: 20px 0px;
+  font-weight: 800;
+  width: var(--w100);
+  text-align: center;
+  background: linear-gradient(125deg, yellow, blue);
+  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent;
+}
+.teams {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: var(--w100);
+  height: 25%;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.teams_total_points {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 12px;
+  gap: 20px;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.teams_point_input {
+  width: var(--w100);
+  padding: 10px;
+}
+.teams_point_input input {
+  width: var(--w100);
+  padding: 5px 10px;
+  color: red;
+  border: none;
+  outline: none;
+  font-weight: 900;
+  border-radius: 10px 0px 10px 0px;
+}
+.teams_point_count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.teams_point_count spam:nth-child(2) {
+  font-size: 19px;
+}
+.team_player_name_box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 50%;
+}
+.Trump_gamne_cards_display_section {
+  height: 25%;
+  width: var(--w100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  box-sizing: border-box;
+  gap: 20px;
+}
+.cards_type_img {
+  width: 100px;
+  height: 80px;
+  border: 20px;
+  padding: 5px;
+  /* overflow: hidden; */
+}
+.cards_type_img:hover {
+  width: 110px;
+  height: 90px;
+  padding: 0;
+}
+.cards_type_img img {
+  width: var(--w100);
+  /* object-fit: contain; */
+  border-radius: 4px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 4px 2px 2px 2px rgb(22, 21, 21);
+}
+.player_name_img {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.players_game_img {
+  width: 30px;
+  height: 30px;
+}
+.players_game_img img {
+  width: var(--w100);
+  height: 100%;
+  object-fit: contain;
 }

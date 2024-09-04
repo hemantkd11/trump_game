@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "/trump_game/static/css/main.1fdeb2e4.css",
-    "main.js": "/trump_game/static/js/main.93dbf543.js",
+    "main.css": "/trump_game/static/css/main.6b4828d1.css",
+    "main.js": "/trump_game/static/js/main.3bfed18e.js",
     "static/js/453.522a45e9.chunk.js": "/trump_game/static/js/453.522a45e9.chunk.js",
+    "static/media/KIng.png": "/trump_game/static/media/KIng.cea338e21c960730835b.png",
     "static/media/Screenshot 2024-09-04 005548.png": "/trump_game/static/media/Screenshot 2024-09-04 005548.635e45745e2b5fb9815c.png",
+    "static/media/diamond.png": "/trump_game/static/media/diamond.2ed1fc45994506a4ad68.png",
+    "static/media/heart.png": "/trump_game/static/media/heart.f35885ab614758faf8ab.png",
+    "static/media/spade.png": "/trump_game/static/media/spade.7e43dd08f14cbbdc6066.png",
+    "static/media/club.png": "/trump_game/static/media/club.b165a6e6568444e43839.png",
     "static/media/trump.png": "/trump_game/static/media/trump.17ad3a59c646307d7e6a.png",
-    "static/media/logo.svg": "/trump_game/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/trump_game/index.html",
-    "main.1fdeb2e4.css.map": "/trump_game/static/css/main.1fdeb2e4.css.map",
-    "main.93dbf543.js.map": "/trump_game/static/js/main.93dbf543.js.map",
+    "main.6b4828d1.css.map": "/trump_game/static/css/main.6b4828d1.css.map",
+    "main.3bfed18e.js.map": "/trump_game/static/js/main.3bfed18e.js.map",
     "453.522a45e9.chunk.js.map": "/trump_game/static/js/453.522a45e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1fdeb2e4.css",
-    "static/js/main.93dbf543.js"
+    "static/css/main.6b4828d1.css",
+    "static/js/main.3bfed18e.js"
   ]
 }

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/trump_game/static/css/main.6b4828d1.css",
+    "main.css": "/trump_game/static/css/main.4ff0be25.css",
     "main.js": "/trump_game/static/js/main.3bfed18e.js",
     "static/js/453.522a45e9.chunk.js": "/trump_game/static/js/453.522a45e9.chunk.js",
     "static/media/KIng.png": "/trump_game/static/media/KIng.cea338e21c960730835b.png",
@@ -11,12 +11,12 @@
     "static/media/club.png": "/trump_game/static/media/club.b165a6e6568444e43839.png",
     "static/media/trump.png": "/trump_game/static/media/trump.17ad3a59c646307d7e6a.png",
     "index.html": "/trump_game/index.html",
-    "main.6b4828d1.css.map": "/trump_game/static/css/main.6b4828d1.css.map",
+    "main.4ff0be25.css.map": "/trump_game/static/css/main.4ff0be25.css.map",
     "main.3bfed18e.js.map": "/trump_game/static/js/main.3bfed18e.js.map",
     "453.522a45e9.chunk.js.map": "/trump_game/static/js/453.522a45e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b4828d1.css",
+    "static/css/main.4ff0be25.css",
     "static/js/main.3bfed18e.js"
   ]
 }

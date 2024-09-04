@@ -1,16 +1,24 @@
+:root {
+  --w100: 100%;
+  --w90: 90%;
+  --w80: 80%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 60vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
 }
 
 .App-header {
@@ -27,7 +35,6 @@
 .App-link {
   color: #61dafb;
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +42,109 @@
   to {
     transform: rotate(360deg);
   }
+}
+.Main_body_container {
+  width: var(--w100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+}
+.Main_body_width_container {
+  width: var(--w80);
+  box-sizing: border-box;
+}
+.Main_wrapper {
+  box-sizing: border-box;
+  width: var(--w100);
+  height: 100vh;
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.team_box {
+  width: var(--w100);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* demo start */
+
+.input-container {
+  position: relative;
+}
+
+.singleline-input {
+  width: 100%;
+  padding: 10px;
+  padding-left: 12px;
+  border: 2px solid #1e90ff; /* Blue border color */
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  height: 40px;
+}
+
+.floating-label {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  background-color: white;
+  border-radius: 10px 10px 0px 0px;
+  padding: 0 4px;
+  color: #1e90ff; /* Blue text color */
+  font-size: 16px;
+  transition: 0.2s ease-in-out;
+  pointer-events: none; /* Prevents the label from being clicked */
+}
+
+.singleline-input:focus + .floating-label,
+.singleline-input:not(:placeholder-shown) + .floating-label {
+  top: 10px;
+  left: 40px;
+  font-size: 16px;
+  color: #1e90ff;
+}
+.singleline-input:focus + .floating-label,
+.singleline-input:not(:placeholder-shown) + .floating-label {
+  top: -10px;
+  left: 20px;
+  font-size: 16px;
+  /* color: #ffffff; */
+}
+/* demo end */
+.trump_card_img {
+  width: 150px;
+  height: 150px;
+}
+.start_game_box {
+  width: var(--w100);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.trump_card_img img {
+  width: var(--w100);
+}
+.start_game_btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.start_game_btn button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #4b9ced;
+  color: white;
+  border-radius: 7px;
+}
+.start_game_btn button:hover {
+  background-color: yellowgreen;
 }

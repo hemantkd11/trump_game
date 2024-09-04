@@ -11,7 +11,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://<username>.github.io/trump_game",
+  "homepage": "https://hemantkd11.github.io/trump_game",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

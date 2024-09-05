@@ -3,8 +3,10 @@
   --w90: 90%;
   --w80: 80%;
 }
+
 * {
   margin: 0;
+  /* max-width: 450px; */
   padding: 0;
   box-sizing: border-box;
 }
@@ -199,18 +201,34 @@
   font-size: 12px;
   gap: 20px;
   width: 50%;
+
   box-sizing: border-box;
 }
 
 .teams_point_input {
   width: var(--w100);
-  padding: 10px;
+  border-radius: 10px 0px 10px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  background-color: white;
+}
+.teams_point_input button {
+  background-color: goldenrod;
+  border: none;
+  border-radius: 10px 0px 10px 0px;
+  outline: none;
+  padding: 3px 5px;
+}
+.teams_point_input button:hover {
+  background-color: yellowgreen;
 }
 .teams_point_input input {
   width: var(--w100);
   padding: 5px 10px;
   color: red;
   border: none;
+  /* background-color: gold; */
   outline: none;
   font-weight: 900;
   border-radius: 10px 0px 10px 0px;
@@ -273,4 +291,30 @@
   width: var(--w100);
   height: 100%;
   object-fit: contain;
+}
+.btn_save_new_game {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px;
+  width: var(--w100);
+}
+.btn_save_new_game button {
+  padding: 7px 10px;
+  font-size: 12px;
+  background-color: goldenrod;
+  color: white;
+}
+.turn_player_name {
+  padding: 10px;
+
+  border: 1px solid goldenrod;
+}
+
+.turn_class {
+  color: goldenrod;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }

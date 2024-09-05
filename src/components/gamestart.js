@@ -44,7 +44,7 @@ const GameStart = () => {
     sum2 = temp;
 
     localStorage.setItem("sum2", sum2);
-    setTeam1(sum2);
+    setTeam2(sum2);
     setTeam1Count("");
   };
   const handleRefresh = () => {

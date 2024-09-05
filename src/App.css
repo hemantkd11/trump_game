@@ -45,14 +45,18 @@
     transform: rotate(360deg);
   }
 }
+.App_main_page {
+  background-color: black;
+  width: var(--w100);
+  height: 100vh;
+}
 .Main_body_container {
   width: var(--w100);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+
   color: white;
-  height: 100vh;
 }
 .Main_body_width_container {
   width: var(--w80);

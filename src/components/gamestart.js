@@ -16,6 +16,7 @@ const GameStart = () => {
   const [team2Count, setTeam2Count] = useState("");
   const [team2, setTeam2] = useState(0);
   const [turn, setTurn] = useState("Player");
+  const [trump, setTrump] = useState("");
 
   useEffect(() => {
     const savedScore1 = localStorage.getItem("sum1");
@@ -54,6 +55,13 @@ const GameStart = () => {
     localStorage.setItem("sum2", 0);
     const countteam2 = Number(localStorage.getItem("sum2"));
     setTeam2(countteam2);
+  };
+  const handletrum = (trumpCard) => {
+    setTrump(trumpCard);
+    document.querySelector(".cards_type_img").style.display = "none";
+  };
+  const handleClosetrump = () => {
+    setTrump("");
   };
   return (
     <div className="start_game">
@@ -103,18 +111,41 @@ const GameStart = () => {
           </div>
           {/* all trump and other thisnf */}
           <div className="Trump_gamne_cards_display_section">
-            <div className="cards_type_img">
-              <img src={Heart} alt="" />
-            </div>
-            <div className="cards_type_img">
-              <img src={Diamond} alt="" />
-            </div>
-            <div className="cards_type_img">
-              <img src={Club} alt="" />
-            </div>
-            <div className="cards_type_img">
-              <img src={Spade} alt="" />
-            </div>
+            {!trump && (
+              <>
+                <div
+                  className="cards_type_img"
+                  onClick={() => handletrum(Heart)}
+                >
+                  <img src={Heart} alt="Heart" />
+                </div>
+                <div
+                  className="cards_type_img"
+                  onClick={() => handletrum(Diamond)}
+                >
+                  <img src={Diamond} alt="Diamond" />
+                </div>
+                <div
+                  className="cards_type_img"
+                  onClick={() => handletrum(Club)}
+                >
+                  <img src={Club} alt="Club" />
+                </div>
+                <div
+                  className="cards_type_img"
+                  onClick={() => handletrum(Spade)}
+                >
+                  <img src={Spade} alt="Spade" />
+                </div>
+              </>
+            )}
+            {trump && (
+              <div className="trum_card_active_box">
+                <div className="trum_card_active" onClick={handleClosetrump}>
+                  <img src={trump} alt="Trump Card" />
+                </div>
+              </div>
+            )}
           </div>
           {/* team 2 box */}
           <div className="teams team1_box">

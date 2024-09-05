@@ -323,3 +323,26 @@
   letter-spacing: 2px;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+.trum_card_active_box {
+  width: var(--w100);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 20px;
+}
+.trum_card_active_box button {
+  padding: 6px 20px;
+  background-color: goldenrod;
+  border-radius: 5px;
+}
+.trum_card_active {
+  width: 70px;
+  height: 110px;
+  align-items: center;
+  display: flex;
+}
+.trum_card_active img {
+  width: var(--w100);
+  height: auto;
+  object-fit: contain;
+}

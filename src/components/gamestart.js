@@ -24,7 +24,7 @@ const GameStart = () => {
     }
     const savedScore2 = localStorage.getItem("sum2");
     if (savedScore2) {
-      setTeam1(Number(savedScore2)); // Retrieve and set the score from localStorage
+      setTeam2(Number(savedScore2)); // Retrieve and set the score from localStorage
     }
   }, []);
   const handleCLickTeam1 = () => {
@@ -53,7 +53,7 @@ const GameStart = () => {
     setTeam1(countteam1);
     localStorage.setItem("sum2", 0);
     const countteam2 = Number(localStorage.getItem("sum2"));
-    setTeam1(countteam2);
+    setTeam2(countteam2);
   };
   return (
     <div className="start_game">

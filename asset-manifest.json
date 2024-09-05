@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/trump_game/static/css/main.cbea3183.css",
-    "main.js": "/trump_game/static/js/main.9c984e67.js",
+    "main.js": "/trump_game/static/js/main.08321ea8.js",
     "static/js/453.522a45e9.chunk.js": "/trump_game/static/js/453.522a45e9.chunk.js",
     "static/media/KIng.png": "/trump_game/static/media/KIng.cea338e21c960730835b.png",
     "static/media/Screenshot 2024-09-04 005548.png": "/trump_game/static/media/Screenshot 2024-09-04 005548.635e45745e2b5fb9815c.png",
@@ -12,11 +12,11 @@
     "static/media/trump.png": "/trump_game/static/media/trump.17ad3a59c646307d7e6a.png",
     "index.html": "/trump_game/index.html",
     "main.cbea3183.css.map": "/trump_game/static/css/main.cbea3183.css.map",
-    "main.9c984e67.js.map": "/trump_game/static/js/main.9c984e67.js.map",
+    "main.08321ea8.js.map": "/trump_game/static/js/main.08321ea8.js.map",
     "453.522a45e9.chunk.js.map": "/trump_game/static/js/453.522a45e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cbea3183.css",
-    "static/js/main.9c984e67.js"
+    "static/js/main.08321ea8.js"
   ]
 }

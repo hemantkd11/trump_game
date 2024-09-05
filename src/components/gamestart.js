@@ -141,7 +141,7 @@ const GameStart = () => {
                 <Input
                   type="number"
                   placeholder="Enter points"
-                  onchange={(e) => setTeam1Count(Number(e.target.value))}
+                  onchange={(e) => setTeam2Count(Number(e.target.value))}
                 />
                 <Button btn_name="Add" onClick={handleCLickTeam2} />
               </div>

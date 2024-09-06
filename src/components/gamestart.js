@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Img from "../Image/KIng.png";
 import Input from "../Utils/Input";
 import { Button } from "../Utils/Button";
@@ -8,6 +8,7 @@ import Diamond from "../Image/diamond.png";
 import Club from "../Image/club.png";
 import Spade from "../Image/spade.png";
 const GameStart = () => {
+  const navigate = useNavigate();
   const location = useLocation();
   const { player1, player2, player3, player4 } = location.state || {};
   console.log(player1, player2, player3, player4);
@@ -17,6 +18,7 @@ const GameStart = () => {
   const [team2, setTeam2] = useState(0);
   const [turn, setTurn] = useState("Player");
   const [trump, setTrump] = useState("");
+  const [add, setAdd] = useState(0);
 
   useEffect(() => {
     const savedScore1 = localStorage.getItem("sum1");
@@ -26,6 +28,15 @@ const GameStart = () => {
     const savedScore2 = localStorage.getItem("sum2");
     if (savedScore2) {
       setTeam2(Number(savedScore2)); // Retrieve and set the score from localStorage
+    }
+    const storedTrumpCard = localStorage.getItem("trumpCard");
+    if (storedTrumpCard) {
+      setTrump(storedTrumpCard);
+    }
+
+    const storedTurn = localStorage.getItem("turn");
+    if (storedTurn) {
+      setTurn(storedTurn); // Set the turn from localStorage if available
     }
   }, []);
   const handleCLickTeam1 = () => {
@@ -43,25 +54,33 @@ const GameStart = () => {
     let sum2 = Number(team2);
     let temp = Number(sum2) + Number(team2Count);
     sum2 = temp;
-
     localStorage.setItem("sum2", sum2);
     setTeam2(sum2);
     setTeam1Count("");
   };
   const handleRefresh = () => {
-    localStorage.setItem("sum1", 0);
-    const countteam1 = Number(localStorage.getItem("sum1"));
-    setTeam1(countteam1);
-    localStorage.setItem("sum2", 0);
-    const countteam2 = Number(localStorage.getItem("sum2"));
-    setTeam2(countteam2);
+    // localStorage.setItem("sum1", 0);
+    // const countteam1 = Number(localStorage.getItem("sum1"));
+    // setTeam1(countteam1);
+    // localStorage.setItem("sum2", 0);
+    // const countteam2 = Number(localStorage.getItem("sum2"));
+    // setTeam2(countteam2);
+    localStorage.clear();
+    window.location.reload();
   };
   const handletrum = (trumpCard) => {
+    localStorage.setItem("trumpCard", trumpCard);
     setTrump(trumpCard);
     document.querySelector(".cards_type_img").style.display = "none";
   };
-  const handleClosetrump = () => {
+  const handleClosetrump = (num) => {
+    localStorage.clear();
     setTrump("");
+  };
+  const handleAddpoint = (num) => {
+    const sum = Number(add);
+    const team1Point = Number(sum) + Number(num);
+    setAdd(team1Point);
   };
   return (
     <div className="start_game">
@@ -71,7 +90,8 @@ const GameStart = () => {
             <p>Trump_Game</p>
           </div>
           <div className="turn_player_name">
-            Now It's <span className="turn_class">{turn}</span>'s turn
+            Now It's <span className="turn_class">{turn || "Player"}</span>'s
+            turn
           </div>
 
           <div className="teams team1_box">
@@ -81,7 +101,12 @@ const GameStart = () => {
                   <img src={Img} alt="player1" />
                 </div>
                 <div>
-                  <div onClick={() => setTurn(player1.toUpperCase())}>
+                  <div
+                    onClick={() => {
+                      localStorage.setItem("turn", player1);
+                      setTurn(player1);
+                    }}
+                  >
                     {player1}
                   </div>
                 </div>
@@ -91,7 +116,14 @@ const GameStart = () => {
                   <img src={Img} alt="player1" />
                 </div>
                 <div>
-                  <div onClick={() => setTurn(player2)}>{player2}</div>
+                  <div
+                    onClick={() => {
+                      localStorage.setItem("turn", player2);
+                      setTurn(player2);
+                    }}
+                  >
+                    {player2}
+                  </div>
                 </div>
               </div>
             </div>
@@ -104,6 +136,20 @@ const GameStart = () => {
                 />
                 <Button btn_name="Add" onClick={handleCLickTeam1} />
               </div>
+              {/* <div className="point_table">
+                <p onClick={() => handleAddpoint("5")}>5</p>
+                <p onClick={() => handleAddpoint("6")}>6</p>
+                <p onClick={() => handleAddpoint("7")}>7</p>
+                <p onClick={() => handleAddpoint("8")}>8</p>
+                <p onClick={() => handleAddpoint("9")}>9</p>
+              </div>
+              <div className="point_table">
+                <p>10</p>
+                <p>12</p>
+                <p>14</p>
+                <p>16</p>
+                <p>18</p>
+              </div> */}
               <div className="teams_point_count">
                 <spam>Total points of your team</spam> <spam>{team1}</spam>
               </div>
@@ -155,7 +201,14 @@ const GameStart = () => {
                   <img src={Img} alt="player1" />
                 </div>
                 <div>
-                  <div onClick={() => setTurn(player3)}>{player3}</div>
+                  <div
+                    onClick={() => {
+                      localStorage.setItem("turn", player3);
+                      setTurn(player3);
+                    }}
+                  >
+                    {player3}
+                  </div>
                 </div>
               </div>
               <div className="player_name_img">
@@ -163,7 +216,14 @@ const GameStart = () => {
                   <img src={Img} alt="player1" />
                 </div>
                 <div>
-                  <div onClick={() => setTurn(player4)}>{player4}</div>
+                  <div
+                    onClick={() => {
+                      localStorage.setItem("turn", player4);
+                      setTurn(player4);
+                    }}
+                  >
+                    {player4}
+                  </div>
                 </div>
               </div>
             </div>

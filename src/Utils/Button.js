@@ -5,4 +5,3 @@ export const Button = ({ className, btn_name, onSubmit, onClick }) => {
     </button>
   );
 };
-// /kjnjnncjncjncjn
